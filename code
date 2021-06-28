@@ -1,17 +1,12 @@
-;The purpose of this program is to...
-;This program was written by : Donald Duck and Minnie Mouse
-;Date :
-;Pin C.0 connects to switch one. (SW1)
-;Pin C.1 connects to switch one. (SW2)
-;Pin C.2 connects to switch one. (SW3)
-;Pin B.0 to B.3 connects to transistors that connect to stepper motor coils.
-;Pin B.4 connects to Green LED
-symbol LED = B.4 ; Rename output B.4 ‘LED’
-symbol flashcount = b0 ; Renames b0 to flashcount
-symbol counter =b1 ; Renames b1 to counter
-let dirsc=%00000000 ;Assigns all port C pins as inputs
-let dirsb=%11111111 ;Assigns all port B pins as outputs
-
+'The purpose of this program is to...
+'This program was written by : Donald Duck and Minnie Mouse
+'Date :
+'Pin C.0 connects to switch one. (SW1)
+'Pin C.1 connects to switch one. (SW2)
+'Pin C.2 connects to switch one. (SW3)
+'Pin B.0 to B.3 connects to transistors that connect to stepper motor coils.
+'Pin B.4 connects to Green LED
+symbol LED = B.4 'Rename output B.4 ‘LED’
 main: ; make a label called ‘main’
 if pinC.3 = 1 then flash ; jump if the input is on
 goto main ; else loop back around
